@@ -35,6 +35,15 @@ end
 #WYSIHTML5 editor (https://github.com/Nerian/bootstrap-wysihtml5-rails)
 gem 'bootstrap-wysihtml5-rails'
 
+#Another WYSIWYG editor
+gem 'ckeditor'
+#paperclip for file upload management
+gem 'paperclip'
+# a third WYSIWYG editor
+gem 'bootsy'
+# a fourth WYSIWYG editor
+gem 'mercury-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
