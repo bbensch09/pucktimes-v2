@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :article_content %><br>
-    <%= f.text_field :article_content %>
+    <%= f.cktext_area :article_content, :class => "ckeditor-content", :ckeditor => {:language => 'us'}, :value => 'Write your new article here' %>
   </div>
   <div class="actions">
     <%= f.submit %>

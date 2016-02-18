@@ -17,7 +17,7 @@
 
 <p>
   <strong>Article content:</strong>
-  <%= @article.article_content %>
+  <%= raw(@article.article_content) %>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
