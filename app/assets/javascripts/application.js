@@ -16,4 +16,5 @@
 //= require_tree .
 //= require tether
 //= require bootstrap-sprockets
+//= require ckeditor/init
 //= require bootstrap-wysihtml5
