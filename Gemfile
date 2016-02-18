@@ -42,8 +42,7 @@ gem 'paperclip'
 # a third WYSIWYG editor
 gem 'bootsy'
 # a fourth WYSIWYG editor
-gem 'mercury-rails'
-
+# gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
