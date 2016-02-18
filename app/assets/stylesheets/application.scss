@@ -16,3 +16,27 @@
 @import "bootstrap";
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 */
+
+.container-fluid {
+  width: 95vw;
+  max-width: 1000px;
+  padding-right: 2vw !important;
+  padding-left: 3vw !important;
+}
+
+.sticky-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    position: fixed !important;
+}
+
+.header-image{
+  top:50px;
+  position: relative;
+  clear: both;
+  margin-left: auto;
+  height:100px;
+  max-width: 1000px;
+}
