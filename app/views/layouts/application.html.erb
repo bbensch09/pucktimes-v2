@@ -18,8 +18,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default sticky-header">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -29,22 +28,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Recent Analysis <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Sharks Schedule</a></li>
+          <li class="active"><a href="/articles">Previous Articles <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Today's Article</a></li>
+          <li><a href="http://sharks.nhl.com/club/schedule.htm">Sharks Schedule</a></li>
           <li><a href="#">About Us</a></li>
         </ul>
-        <form class="navbar-form navbar-left" role="search">
+        <!-- <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search past articles">
           </div>
           <button type="submit" class="btn btn-default">Search</button>
-        </form>
+        </form> -->
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Log in / Register</a></li>
           <li><a href="#">Log out</a></li>
@@ -53,7 +53,37 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-<%= yield %>
+  <% if flash[:success] %>
+  <div class="alert alert-success" role="alert">
+    <%= flash[:success] %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  </div>
+  <% end %>
+  <% if flash[:info] %>
+  <div class="alert alert-info" role="alert">
+    <%= flash[:info] %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  </div>
+  <% end %>
+  <% if flash[:warning] %>
+  <div class="alert alert-warning" role="alert">
+    <%= flash[:warning] %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  </div>
+  <% end %>
+  <% if flash[:danger] %>
+  <div class="alert alert-danger" role="alert">
+    <%= flash[:danger] %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  </div>
+  <% end %>
+
+  <div class="container-fluid">
+    <div id="header-branding">
+      <img class="header-image" src="http://pucktimes.com/imgs/pucktimes-logo.png" alt="logo banner here"/>
+    </div>
+  <%= yield %>
+  </div>
 
 </body>
 </html>

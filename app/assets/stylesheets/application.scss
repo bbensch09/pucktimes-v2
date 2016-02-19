@@ -16,3 +16,69 @@
 @import "bootstrap";
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 */
+
+$orange: #ff6618;
+$light-teal: #76bbc5;
+$teal: #00788a;
+$gray: #9A9C9F;
+$black: #0F0F0D;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Roboto",Helvetica;
+}
+
+
+.container-fluid {
+  width: 95vw;
+  max-width: 1000px;
+  padding-right: 2vw !important;
+  padding-left: 3vw !important;
+}
+
+.sticky-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    position: fixed !important;
+}
+
+.header-image{
+  top:50px;
+  position: relative;
+  clear: both;
+  margin-left: auto;
+  height:100px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+.author-photo{
+  height:40px;
+}
+.content-area{
+ font-size: 1.1em;
+}
+.row{
+  display: inline;
+}
+.thumbnail{
+  height:200px;
+}
+.img-thumbnail, .caption{
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.caption {
+  z-index: 10;
+}
+.title-link, .title-link:visited{
+  color: #ffffff;
+}
