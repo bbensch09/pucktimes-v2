@@ -17,6 +17,20 @@
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 */
 
+$orange: #ff6618;
+$light-teal: #76bbc5;
+$teal: #00788a;
+$gray: #9A9C9F;
+$black: #0F0F0D;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Roboto",Helvetica;
+}
+
+
 .container-fluid {
   width: 95vw;
   max-width: 1000px;
@@ -41,4 +55,10 @@
   width: 100%;
   max-width: 1000px;
   margin-bottom: 50px;
+}
+.author-photo{
+  height:40px;
+}
+.content-area{
+  
 }
