@@ -24,6 +24,10 @@
     <%= f.date_select :published %>
   </div>
   <div class="field">
+    <%= f.label :cover_photo %><br>
+    <%= f.file_field :cover_photo %>
+  </div>
+  <div class="field">
     <%= f.label :article_content %><br>
     <%= f.cktext_area :article_content, :class => "ckeditor-content", :ckeditor => {:language => 'us'} %>
   </div>

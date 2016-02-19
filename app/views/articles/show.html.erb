@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <h1>
     <strong>
@@ -14,6 +12,7 @@
 </p>
 <hr>
 <div class="content-area">
+  <%= image_tag @article.cover_photo.url(:medium) %>
   <%= raw(@article.article_content) %>
 </div>
 <hr>

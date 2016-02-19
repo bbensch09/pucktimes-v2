@@ -41,7 +41,8 @@
   <% @articles.each do |article| %>
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
-        <img itemprop="image" src="http://i2.wp.com/thehockeywriters.com/wp-content/uploads/2015/09/Max-Domi.jpg?zoom=2&amp;resize=395%2C238" alt="5 Reasons to Believe in the San Jose Sharks" class="img-responsive img-thumbnail" width="395" height="238">
+        <%= image_tag article.cover_photo.url(:medium), alt:"cover-photo", class:"img-responsive img-thumbnail" %>
+        <!-- <img itemprop="image" src="http://i2.wp.com/thehockeywriters.com/wp-content/uploads/2015/09/Max-Domi.jpg?zoom=2&amp;resize=395%2C238" alt="5 Reasons to Believe in the San Jose Sharks" class="img-responsive img-thumbnail" width="395" height="238"> -->
         <div class="caption">
           <%= link_to article.title, article, :class=>"btn btn-primary title-link" %>
         </div>

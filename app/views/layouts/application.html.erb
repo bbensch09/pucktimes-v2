@@ -63,7 +63,7 @@
       <img class="header-image" src="http://pucktimes.com/imgs/pucktimes-logo.png" alt="logo banner here"/>
     </div>
     <% if notice || alert %>
-        <p class="alert alert-info"><%= notice %></p>
+        <p id="notice"><%= notice %></p>
         <p class="alert-danger"><%= alert %></p>
     <%end%>
     <% if flash[:success] %>
