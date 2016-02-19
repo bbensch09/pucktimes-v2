@@ -33,16 +33,20 @@ source 'https://rails-assets.org' do
 end
 
 #WYSIHTML5 editor (https://github.com/Nerian/bootstrap-wysihtml5-rails)
-gem 'bootstrap-wysihtml5-rails'
+# gem 'bootstrap-wysihtml5-rails'
 
 #Another WYSIWYG editor
 gem 'ckeditor'
 #paperclip for file upload management
 gem 'paperclip'
 # a third WYSIWYG editor
-gem 'bootsy'
+# gem 'bootsy'
 # a fourth WYSIWYG editor
 # gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git'
+
+#Devise for core login/registration + Omniauth for eventual FB signup
+gem 'devise'
+gem 'omniauth-facebook'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
