@@ -32,13 +32,16 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
 
-#WYSIHTML5 editor (https://github.com/Nerian/bootstrap-wysihtml5-rails)
-# gem 'bootstrap-wysihtml5-rails'
-
+#AWS SDK's for storing images
+gem "aws-s3"
+gem 'aws-sdk-v1'
+gem 'aws-sdk', '~> 2'
 #Another WYSIWYG editor
 gem 'ckeditor'
 #paperclip for file upload management
 gem 'paperclip'
+#WYSIHTML5 editor (https://github.com/Nerian/bootstrap-wysihtml5-rails)
+# gem 'bootstrap-wysihtml5-rails'
 # a third WYSIWYG editor
 # gem 'bootsy'
 # a fourth WYSIWYG editor
