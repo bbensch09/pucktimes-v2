@@ -16,7 +16,9 @@
   <%= raw(@article.article_content) %>
 </div>
 <hr>
+<% if user_signed_in? && (current_user.email == "bbensch@gmail.com" || current_user.email == "abensch66@gmail.com") %>
 <%= link_to edit_article_path(@article), class:"btn btn-default" do %>
 <i class="glyphicon glyphicon-pencil">Edit</i>
+  <%end%>
 <%end%>
 <%= link_to 'Back to all Articles', articles_path, class:"btn btn-default" %>
