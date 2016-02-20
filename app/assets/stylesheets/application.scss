@@ -36,8 +36,47 @@ $black: #0F0F0D;
   max-width: 1000px;
   padding-right: 2vw !important;
   padding-left: 3vw !important;
+  background-color: white;
 }
-
+.outer-bg-container{
+  width: 100vw;
+  max-width: 2000px;
+  // background-color: #0f0b0a;
+  z-index: -2;
+}
+.bg-center{
+  width: 1000px;
+  height: 100vh;
+  left: 50%;
+  margin-left:-500px;
+  z-index: -1;
+  background-color: white;
+  position: fixed;
+}
+.bg-left{
+  position:absolute;
+  height:100vh;
+  width:400px;
+  left:-400px;
+  top:0;
+  overflow:hidden;
+  z-index: -1;
+  background-image: url("/assets/shark-head-entrance-vignette.jpg");
+  background-repeat: no-repeat;
+  background-color: #464646;
+}
+.bg-right{
+  position:absolute;
+  height:100vh;
+  width:400px;
+  right:-400px;
+  top:0;
+  overflow:hidden;
+  z-index: -1;
+  background-image: url("/assets/pavs-slapper-vignette.jpg");
+  background-repeat: no-repeat;
+  background-color: #464646;
+}
 .sticky-header {
     top: 0;
     left: 0;
