@@ -6,13 +6,13 @@
   </h1>
 
   <p>
-    <%= image_tag 'andy-headshot.png', class:"author-photo", alt:"author-photo" %>
-    <strong>Writen by: <%= @article.author %> </strong> |  <em>Published:  <%= @article.time_since_written %> </em>
+    <!-- %= image_tag 'andy-headshot.png', class:"author-photo", alt:"author-photo" %> -->
+    <strong>By: <%= @article.author %> </strong> |  <em>Published:  <%= @article.time_since_written %> </em>
   </p>
 </p>
 <hr>
 <div class="content-area">
-  <%= image_tag @article.cover_photo.url(:medium) %>
+  <%= image_tag @article.cover_photo.url(:large), class:"cover-photo" %>
   <%= raw(@article.article_content) %>
 </div>
 <hr>

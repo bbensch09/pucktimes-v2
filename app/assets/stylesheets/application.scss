@@ -98,6 +98,12 @@ $black: #0F0F0D;
 .author-photo{
   height:100px;
 }
+.cover-photo{
+  float:left;
+  width:100%;
+  max-width: 600px;
+  padding-right: 10px;
+}
 .content-area{
  font-size: 1.1em;
 }
@@ -105,7 +111,8 @@ $black: #0F0F0D;
   display: inline;
 }
 .thumbnail{
-  height:200px;
+  height:300px;
+  padding: 20 20 20 20px;
 }
 .img-thumbnail, .caption{
   vertical-align: middle;
@@ -120,4 +127,16 @@ $black: #0F0F0D;
 }
 .title-link, .title-link:visited{
   color: #ffffff;
+}
+.brian-bio {
+  float:right;
+  width: 250px;
+  max-width: 50%;
+  padding: 20px;
+}
+.andy-bio {
+  float:left;
+  width: 250px;
+  max-width: 50%;
+  padding: 20px;
 }
