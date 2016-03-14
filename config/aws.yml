@@ -1,9 +1,1 @@
-development:
-    access_key_id: AKIAJH2QUUCMLLHD25NA
-    secret_access_key: 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
-    bucket: puck-times
-
-production:
-    access_key_id: AKIAJH2QUUCMLLHD25NA
-    secret_access_key: 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
-    bucket: puck-times
+#REMOVED PREVIOUS DATA
