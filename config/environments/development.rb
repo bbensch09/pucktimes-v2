@@ -41,6 +41,16 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   #tell Paperclip where to look for local images
-  Paperclip.options[:command_path] = "/usr/local/bin/"
+  #DEVELOPMENT - without pushing anything to AWS
+  # Paperclip.options[:command_path] = "/usr/local/bin/"
+  #PAPERCLIP config - DEVELOPMENT - testing while pushing to AWS
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['S3_BUCKET_NAME'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
 
 end
