@@ -4,9 +4,6 @@ class Article < ActiveRecord::Base
 
   has_attached_file :cover_photo, styles: { large: "600x400>", thumb: "120x80>" }, default_url: "/images/:style/missing.png",
     :storage => :s3,
-          # #USE THE BELOW CREDENTIALS FOR LOCAL TESTING
-            # :s3_credentials => "#{Rails.root}/config/aws.yml",
-          # #USE THIS FOR HEROKU
           :s3_credentials => {
               :bucket => ENV['S3_BUCKET_NAME'],
               :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
