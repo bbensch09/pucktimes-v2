@@ -11,3 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+#Ignore Local ENV variables
+/config/local_env.yml
+/config/aws.yml
