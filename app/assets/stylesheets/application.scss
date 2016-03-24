@@ -147,3 +147,19 @@ $black: #0F0F0D;
 .signed-in-nav {
   font-size: 0.8em;
 }
+.adsense-side{
+  height: 90vh;
+  min-width: 200px;
+  right: 0px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.adsense-bottom{
+  min-height: 200px;
+  width: 100%;
+  bottom: 0px;
+}
+.adsense-side, .adsense-bottom {
+  /*background-color: gray;*/
+  border: 1px gray;
+}
