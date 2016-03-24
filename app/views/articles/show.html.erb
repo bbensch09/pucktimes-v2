@@ -1,24 +1,88 @@
-<p>
-  <h1>
-    <strong>
-    <%= @article.title %>
-    </strong>
-  </h1>
-
+<div class="title-author-top">
   <p>
-    <!-- %= image_tag 'andy-headshot.png', class:"author-photo", alt:"author-photo" %> -->
-    <strong>By: <%= @article.author %> </strong> |  <em>Published:  <%= @article.time_since_written %> </em>
+    <h1>
+      <strong>
+      <%= @article.title %>
+      </strong>
+    </h1>
+    <p>
+      <strong>By: <%= @article.author %> </strong> |  <em>Published:  <%= @article.time_since_written %> </em>
+    </p>
   </p>
-</p>
-<hr>
-<div class="content-area">
+  <hr>
+</div>
+
+<div class="content-area col-lg-9 col-sm-6">
   <%= image_tag @article.cover_photo.url(:large), class:"cover-photo" %>
   <%= raw(@article.article_content) %>
+  <hr>
+
+<% if user_signed_in? && (current_user.email == "bbensch@gmail.com" || current_user.email == "abensch66@gmail.com") %>
+    <%= link_to edit_article_path(@article), class:"btn btn-default" do %>
+    <i class="glyphicon glyphicon-pencil">Edit</i>
+      <%end%>
+  <%end%>
+<%= link_to 'Back to all Articles', articles_path, class:"btn btn-default" %>
+</div>
+<div class="adsense-side ad1 col-lg-3 col-sm-6">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- PuckTimes - side ad #1 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2647131622896578"
+       data-ad-slot="6404919044"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<div class="adsense-side ad2 col-lg-3 col-sm-6">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- PuckTimes - side ad #2 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2647131622896578"
+       data-ad-slot="5008911045"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<div class="adsense-side ad3 col-lg-3 col-sm-6">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- PuckTimes - side ad #3 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2647131622896578"
+       data-ad-slot="6485644245"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<div class="adsense-side ad4 col-lg-3 col-sm-6">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- PuckTimes - side ad #4 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2647131622896578"
+       data-ad-slot="7962377444"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<div class="col-lg-12 col-sm-6 adsense-bottom ad5">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- PuckTimes - side ad #5 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2647131622896578"
+       data-ad-slot="9439110642"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </div>
 <hr>
-<% if user_signed_in? && (current_user.email == "bbensch@gmail.com" || current_user.email == "abensch66@gmail.com") %>
-<%= link_to edit_article_path(@article), class:"btn btn-default" do %>
-<i class="glyphicon glyphicon-pencil">Edit</i>
-  <%end%>
-<%end%>
-<%= link_to 'Back to all Articles', articles_path, class:"btn btn-default" %>
+
