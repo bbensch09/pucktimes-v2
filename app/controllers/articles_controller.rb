@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all.sort {|a,b| a.time_since_written <=> b.time_since_written}
+    @articles = Article.all.sort {|a,b| b.published <=> a.published}
   end
 
   # GET /articles/1
