@@ -15,13 +15,27 @@ class Article < ActiveRecord::Base
            :s3_host_name => 's3-us-west-1.amazonaws.com'
   validates_attachment_content_type :cover_photo, content_type: /\Aimage\/.*\Z/
 
+  # original method for showing days since publish date
+  # def time_since_written
+  #   time_elapsed = ((Date.today - published) / 1).round
+  #     if time_elapsed < 1
+  #       return "today."
+  #     else
+  #       return "#{time_elapsed} days ago."
+  #     end
+  # end
+
   def time_since_written
-    time_elapsed = ((Date.today - published) / 1).round
-      if time_elapsed < 1
-        return "today."
-      else
-        return "#{time_elapsed} days ago."
-      end
-  end
+  days_elapsed = ((Time.now - updated_at.to_time) / (60*60*24)).round
+  hours_elapsed = ((Time.now - updated_at.to_time) / (60*60)).round
+  minutes_elapsed = ((Time.now - updated_at.to_time) / (60)).round
+    if minutes_elapsed < 60
+      return "#{minutes_elapsed} minutes ago."
+    elsif hours_elapsed < 24
+      return "#{hours_elapsed} hours ago."
+    else
+      return "#{days_elapsed} days ago."
+    end
+end
 
 end
