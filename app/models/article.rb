@@ -25,6 +25,10 @@ class Article < ActiveRecord::Base
   #     end
   # end
 
+  def to_param
+        [id, title.parameterize].join("-")
+  end
+
   def time_since_written
   days_elapsed = ((Time.now - updated_at.to_time) / (60*60*24)).round
   hours_elapsed = ((Time.now - updated_at.to_time) / (60*60)).round
