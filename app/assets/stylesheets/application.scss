@@ -166,3 +166,10 @@ $black: #0F0F0D;
   /*background-color: gray;*/
   border: 1px gray;
 }
+@media screen and (max-width:767px) {
+  .container-fluid {
+    width: 95vw;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+}
